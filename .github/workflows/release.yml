@@ -1,0 +1,12 @@
+name: Release
+
+on: workflow_dispatch # Ausführung ist über den GitHub Actions Workflow Tab möglich.
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install WeasyPrint
+        run: pip install weasyprint
+      - name: Help
+        run: weasyprint -h
